@@ -67,5 +67,3 @@ export function SummaryTable() {
         </div>
     )
 }
-
-//Aula 4 54:00
