@@ -28,9 +28,9 @@ async function run() {
             { week_day: 1 },
             { week_day: 2 },
             { week_day: 3 },
-          ]
-        }
-      }
+          ],
+        },
+      },
     }),
 
     prisma.habit.create({
@@ -43,9 +43,9 @@ async function run() {
             { week_day: 3 },
             { week_day: 4 },
             { week_day: 5 },
-          ]
-        }
-      }
+          ],
+        },
+      },
     }),
 
     prisma.habit.create({
@@ -60,11 +60,11 @@ async function run() {
             { week_day: 3 },
             { week_day: 4 },
             { week_day: 5 },
-          ]
-        }
-      }
-    })
-  ])
+          ],
+        },
+      },
+    }),
+  ]);
 
   await Promise.all([
     prisma.day.create({
@@ -73,9 +73,9 @@ async function run() {
         dayHabits: {
           create: {
             habit_id: firstHabitId,
-          }
-        }
-      }
+          },
+        },
+      },
     }),
 
     prisma.day.create({
@@ -84,9 +84,9 @@ async function run() {
         dayHabits: {
           create: {
             habit_id: firstHabitId,
-          }
-        }
-      }
+          },
+        },
+      },
     }),
 
     prisma.day.create({
@@ -96,11 +96,11 @@ async function run() {
           create: [
             { habit_id: firstHabitId },
             { habit_id: secondHabitId },
-          ]
-        }
-      }
+          ],
+        },
+      },
     }),
-  ])
+  ]);
 }
 
 run()
@@ -113,4 +113,4 @@ run()
     process.exit(1)
   })
 
-  //30:00
+  
